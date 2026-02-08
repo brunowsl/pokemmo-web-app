@@ -19,7 +19,7 @@ const methods = [
       'Best regions for reruns: Kanto and Unova (highest payouts)',
       'A good sweep team like Cloyster (Shell Smash + Skill Link) or Cinccino (Technician) can clear fast',
       'With Amulet Coin, expect ~150k–300k per full gym run depending on the region',
-      'Many players run multiple accounts simultaneously for more income'
+      'All 4 regions (Kanto, Johto, Hoenn, Sinnoh, Unova) can be run in rotation for maximum income'
     ]
   },
   {
@@ -28,14 +28,14 @@ const methods = [
     income: '~100k–200k per cycle',
     icon: 'i-lucide-user',
     color: 'text-blue-400',
-    description: 'After beating the storyline, NPC trainers across the map can be rebattled on a timer. "Rich trainers" (those who give the most money) are the priority targets. Pair with Amulet Coin for double rewards.',
+    description: 'After beating the storyline, NPC trainers across the map can be rebattled on a cooldown. "Rich trainers" (those who give the most money) are the priority targets. Pair with Amulet Coin for double rewards.',
     details: [
-      'Trainers reset every 6 hours after being defeated',
-      'Focus on "Rich Boy" and "Lady" trainer classes — they pay the most',
+      'Trainers reset approximately every 6 hours after being defeated',
+      'Focus on "Rich Boy", "Lady", and "Gentleman" trainer classes — they pay the most',
       'Amulet Coin is essential to double all earnings',
-      'Search online for updated rich trainer location maps',
+      'Search PokeMMO forums for updated rich trainer location maps',
       'Can be combined with gym reruns in the same session',
-      'Using a Pokémon with Pay Day adds a small bonus per battle'
+      'Using a Pokémon with Pay Day (e.g., Persian) adds a small bonus per battle'
     ]
   },
   {
@@ -44,15 +44,14 @@ const methods = [
     income: '~50k–100k per harvest',
     icon: 'i-lucide-flower-2',
     color: 'text-green-400',
-    description: 'One of the most passive income methods. Leppa Berries are always in demand because they restore PP and are used in competitive play. Plant them, wait for the growth cycle, harvest, and sell on the GTL.',
+    description: 'One of the most passive income methods. Leppa Berries are always in demand because they restore PP and are essential for horde EV training. Plant them, wait for the growth cycle, harvest, and sell on the GTL.',
     details: [
-      'Leppa Berries grow in approximately 6 hours',
-      'Best planting spots: Abundant Shrine area in Unova (many berry plots)',
-      'Requires reaching at least the 6th badge in Unova or completing Elite Four',
+      'Leppa Berries take approximately 4–8 hours to grow depending on watering',
+      'Best planting spots: Abundant Shrine area in Unova and various berry plots across regions',
+      'Plant in all available berry slots across multiple regions for maximum yield',
       'Can be done on multiple accounts for massive passive income',
-      'Harvest twice per day (every 6 hours) for optimal returns',
       'Takes only ~5 minutes per account to plant and harvest',
-      'Also consider farming Lum Berries (cure all status) which sell well'
+      'Also consider farming Lum Berries (cure all status) which sell well for competitive players'
     ]
   },
   {
@@ -94,15 +93,15 @@ const methods = [
     income: '~50k–500k+ per catch',
     icon: 'i-lucide-target',
     color: 'text-cyan-400',
-    description: 'Catching wild Pokémon with good IVs, natures, or in useful egg groups and selling them on the GTL. Safari Zone Magikarp (Dragon egg group) with good IVs are a classic example.',
+    description: 'Catching wild Pokémon with good IVs, natures, or in useful egg groups and selling them on the GTL. Safari Zone Pokémon in valuable egg groups with good IVs are a classic moneymaker.',
     details: [
       'Focus on Pokémon in popular egg groups (Dragon, Monster, Field)',
       'Good IVs in even one stat can sell well if the egg group is valuable',
       'Safari Zone is cost-efficient: entry fee includes 30 balls',
       'Magikarp (Water 2 + Dragon egg group) with good IVs sell well for breeders',
       'Ditto with specific IVs are extremely valuable on the GTL',
-      'Alpha Pokémon can sell at higher prices to collectors',
-      'Check current GTL prices before farming to know what\'s profitable'
+      'Check current GTL prices before farming to know what\'s profitable',
+      'Chansey/Blissey catching for Lucky Eggs is also a viable method'
     ]
   },
   {
@@ -111,14 +110,14 @@ const methods = [
     income: 'Event-dependent',
     icon: 'i-lucide-calendar',
     color: 'text-orange-400',
-    description: 'PokeMMO runs regular events such as PvP tournaments, catch events, and seasonal activities. These often give exclusive cosmetics, items, and direct PokéYen rewards that can be sold or used.',
+    description: 'PokeMMO runs regular events such as PvP tournaments, catch events, and seasonal activities (Halloween, Christmas, Lunar New Year). These often give exclusive cosmetics, items, and direct PokéYen rewards.',
     details: [
       'Check the PokeMMO forums and in-game announcements for scheduled events',
-      'Shiny Wars events are particularly rewarding',
+      'Seasonal events (Halloween, Christmas, Lunar New Year) are the biggest',
       'Raid events give large amounts of money and rare items',
-      'Event-exclusive items can be held and sold later at a premium',
-      'Participating consistently is one of the best ways for newer players to earn',
-      'Some events give direct PokéYen rewards for top performers'
+      'Event-exclusive items and cosmetics can be held and sold later at a premium',
+      'PvP tournaments offer PokéYen prizes and bragging rights',
+      'Participating consistently is one of the best ways for newer players to earn'
     ]
   }
 ]
@@ -151,7 +150,7 @@ const tips = [
   <div>
     <!-- Hero -->
     <section class="relative overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-br from-yellow-500/10 via-transparent to-green-500/5" />
+      <div class="absolute inset-0 bg-linear-to-br from-yellow-500/10 via-transparent to-green-500/5" />
       <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16 text-center">
         <UBadge color="warning" variant="subtle" size="lg" class="mb-4">
           Guide

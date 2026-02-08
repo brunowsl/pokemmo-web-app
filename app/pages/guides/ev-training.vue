@@ -1,50 +1,58 @@
 <script setup lang="ts">
 useSeoMeta({
     title: 'EV Training Guide — PokeMMO Knowledge Assist',
-    description: 'Complete guide to EV training in PokeMMO: what are EVs, best horde locations by region, useful items, and efficient strategies.'
+    description: 'Complete guide to EV training in PokeMMO: best 10 EV/horde spots near PokéCenters, essential items, Power Item math, and efficient strategies for competitive Pokémon.'
 })
 
 interface EvSpot {
     pokemon: string
     location: string
+    method: string
     region: string
     evYield: string
-    notes: string
+    nearPC: string
 }
 
 const hpSpots: EvSpot[] = [
-    { pokemon: 'Dunsparce (×5)', location: 'Route 208', region: 'Sinnoh', evYield: '+1 HP each', notes: 'Horde encounter, easy to find' },
-    { pokemon: 'Marill (×5)', location: 'Mt. Mortar', region: 'Johto', evYield: '+2 HP each', notes: 'Surf hordes, very efficient' },
-    { pokemon: 'Tropius (×5)', location: 'Route 119', region: 'Hoenn', evYield: '+2 HP each', notes: 'Grass hordes, consistent spawn' }
+    { pokemon: 'Stunfisk (×5)', location: 'Icirrus City (pond)', method: 'Surf', region: 'Unova', evYield: '10 HP', nearPC: 'Icirrus City PC — right next to the pond' },
+    { pokemon: 'Marill (×5)', location: 'Route 114', method: 'Surf', region: 'Hoenn', evYield: '10 HP', nearPC: 'Fallarbor Town PC — very close' },
+    { pokemon: 'Lickitung (×5)', location: 'Route 44', method: 'Grass', region: 'Johto', evYield: '10 HP', nearPC: 'Mahogany Town PC — short walk east' },
+    { pokemon: 'Sealeo (×5)', location: 'Route 230', method: 'Surf', region: 'Sinnoh', evYield: '10 HP', nearPC: 'Fight Area PC — accessible via Surf' }
 ]
 
 const attackSpots: EvSpot[] = [
-    { pokemon: 'Patrat (×5)', location: 'Route 1', region: 'Unova', evYield: '+1 Atk each', notes: 'Available very early in Unova' },
-    { pokemon: 'Shuppet (×5)', location: 'Mt. Pyre', region: 'Hoenn', evYield: '+1 Atk each', notes: 'Night hordes, reliable' },
-    { pokemon: 'Sneasel / Snover (×5)', location: 'Route 216–217', region: 'Sinnoh', evYield: '+1 Atk each', notes: 'Late-game Sinnoh, sometimes mixed hordes' }
+    { pokemon: 'Bouffalant (×5)', location: 'Route 10', method: 'Grass', region: 'Unova', evYield: '10 Atk', nearPC: 'Opelucid City PC — adjacent route' },
+    { pokemon: 'Rhydon (×5)', location: 'Victory Road', method: 'Cave', region: 'Sinnoh', evYield: '10 Atk', nearPC: 'Pokémon League PC — at the entrance' },
+    { pokemon: 'Nidorino (×5)', location: 'Route 15', method: 'Grass', region: 'Kanto', evYield: '10 Atk', nearPC: 'Fuchsia City PC — short walk' },
+    { pokemon: 'Machoke (×5)', location: 'Route 211', method: 'Grass', region: 'Sinnoh', evYield: '10 Atk', nearPC: 'Celestic Town — nearby' }
 ]
 
 const defenseSpots: EvSpot[] = [
-    { pokemon: 'Geodude (×5)', location: 'RPokemon League Victory Road', region: 'Multiple', evYield: '+1 Def each', notes: 'Available in caves across regions' },
-    { pokemon: 'Graveler (×5)', location: 'Iron Island', region: 'Sinnoh', evYield: '+2 Def each', notes: 'Higher EVs per encounter' },
-    { pokemon: 'Sandshrew (×5)', location: 'Route 4', region: 'Kanto', evYield: '+1 Def each', notes: 'Early Kanto option' }
+    { pokemon: 'Pelipper (×5)', location: 'Undella Bay', method: 'Surf', region: 'Unova', evYield: '10 Def', nearPC: 'Undella Town PC — Surf from town' },
+    { pokemon: 'Pelipper (×5)', location: 'Route 222', method: 'Surf', region: 'Sinnoh', evYield: '10 Def', nearPC: 'Sunyshore City PC — very close' },
+    { pokemon: 'Sandslash (×5)', location: 'Route 26', method: 'Grass', region: 'Johto', evYield: '10 Def', nearPC: 'Victory Road entrance — nearby' },
+    { pokemon: 'Slowbro (×5)', location: 'Cape Brink', method: 'Grass', region: 'Kanto (Sevii)', evYield: '10 Def', nearPC: 'Two Island PC — short walk north' }
 ]
 
 const spAtkSpots: EvSpot[] = [
-    { pokemon: 'Gastly (×5)', location: 'Sprout Tower', region: 'Johto', evYield: '+1 SpA each', notes: 'Night encounters, reliable hordes' },
-    { pokemon: 'Oddish (×5)', location: 'Route 5', region: 'Kanto', evYield: '+1 SpA each', notes: 'Night hordes in grass' },
-    { pokemon: 'Litwick (×5)', location: 'Celestial Tower', region: 'Unova', evYield: '+1 SpA each', notes: 'Good for Special Attack training' }
+    { pokemon: 'Golduck (×5)', location: 'Resort Area', method: 'Surf', region: 'Sinnoh', evYield: '10 SpA', nearPC: 'Resort Area PC — right there' },
+    { pokemon: 'Golduck (×5)', location: 'Cape Brink (Two Island)', method: 'Surf', region: 'Kanto (Sevii)', evYield: '10 SpA', nearPC: 'Two Island PC — short walk north' },
+    { pokemon: 'Golduck (×5)', location: 'Route 11', method: 'Grass', region: 'Unova', evYield: '10 SpA', nearPC: 'Opelucid City PC — nearby' },
+    { pokemon: 'Flaaffy / Girafarig (×5)', location: 'Route 43', method: 'Grass', region: 'Johto', evYield: '10 SpA', nearPC: 'Mahogany Town PC — walk north' }
 ]
 
 const spDefSpots: EvSpot[] = [
-    { pokemon: 'Tentacool (×5)', location: 'Various Surf routes', region: 'Multiple', evYield: '+1 SpD each', notes: 'Surf hordes, available everywhere' },
-    { pokemon: 'Frillish (×5)', location: 'Driftveil City Surf', region: 'Unova', evYield: '+1 SpD each', notes: 'Surf horde encounters' }
+    { pokemon: 'Tentacruel (×5)', location: 'Battle Frontier', method: 'Surf', region: 'Hoenn', evYield: '10 SpD', nearPC: 'Battle Frontier PC — nearby' },
+    { pokemon: 'Tentacruel (×5)', location: 'Seven Island', method: 'Surf', region: 'Kanto (Sevii)', evYield: '10 SpD', nearPC: 'Seven Island PC — right there' },
+    { pokemon: 'Mantine (×5)', location: 'Undella Town', method: 'Surf', region: 'Unova', evYield: '10 SpD', nearPC: 'Undella Town PC — Surf from town' },
+    { pokemon: 'Tentacruel (×5)', location: 'Route 26', method: 'Surf', region: 'Johto', evYield: '10 SpD', nearPC: 'Near Victory Road entrance' }
 ]
 
 const speedSpots: EvSpot[] = [
-    { pokemon: 'Floatzel (×5)', location: 'Route 222', region: 'Sinnoh', evYield: '+2 Spd each', notes: 'West of Sunyshore, very efficient' },
-    { pokemon: 'Basculin (×5)', location: 'Route 1 Surf', region: 'Unova', evYield: '+2 Spd each', notes: 'Surf encounters, high yield' },
-    { pokemon: 'Zubat (×5)', location: 'Various caves', region: 'Multiple', evYield: '+1 Spd each', notes: 'Common in all regions, cave hordes' }
+    { pokemon: 'Rapidash (×5)', location: 'Route 12', method: 'Grass', region: 'Unova', evYield: '10 Spd', nearPC: 'Lacunosa Town PC — close by' },
+    { pokemon: 'Liepard (×5)', location: 'Dreamyard (Dark Grass)', method: 'Dark Grass', region: 'Unova', evYield: '10 Spd', nearPC: 'Striaton City PC — very close' },
+    { pokemon: 'Poliwhirl (×5)', location: 'Blackthorn City', method: 'Surf', region: 'Johto', evYield: '10 Spd', nearPC: 'Blackthorn City PC — right there' },
+    { pokemon: 'Linoone (×5)', location: 'Route 121', method: 'Grass', region: 'Hoenn', evYield: '10 Spd', nearPC: 'Lilycove City PC — short walk' }
 ]
 
 const statSections = [
@@ -59,21 +67,21 @@ const statSections = [
 const items = [
     {
         name: 'Macho Brace',
-        effect: 'Doubles all EVs gained from battle. Halves Speed during battle.',
+        effect: 'Doubles all EVs gained from battle. Halves Speed during battle. With a 10 EV/horde spot → 20 EVs per horde.',
         icon: 'i-lucide-dumbbell',
-        tip: 'The most accessible EV booster. Buy from Battle Frontier shops or GTL.'
+        tip: 'Accessible early. Buy from Battle Frontier shops or GTL. Good option before you get Power Items.'
     },
     {
         name: 'Power Items',
-        effect: 'Adds +4 EVs in a specific stat per Pokémon defeated. Halves Speed in battle.',
+        effect: 'Adds +8 EVs in a specific stat per Pokémon defeated. With a 10 EV/horde spot → 50 EVs per horde in the target stat.',
         icon: 'i-lucide-zap',
-        tip: 'Power Weight (HP), Power Bracer (Atk), Power Belt (Def), Power Lens (SpA), Power Band (SpD), Power Anklet (Spd).'
+        tip: 'Power Weight (HP), Power Bracer (Atk), Power Belt (Def), Power Lens (SpA), Power Band (SpD), Power Anklet (Spd). Best EV multiplier in game.'
     },
     {
         name: 'Vitamins',
-        effect: 'Gives +10 EVs instantly. Can be used until the stat reaches 100 EVs.',
+        effect: 'Gives +10 EVs instantly in a specific stat. Can be used until the stat reaches 252 EVs.',
         icon: 'i-lucide-pill',
-        tip: 'HP Up, Protein, Iron, Calcium, Zinc, Carbos. Expensive but saves time. Use first, then horde train the rest.'
+        tip: 'HP Up, Protein, Iron, Calcium, Zinc, Carbos. Expensive but saves time. Use first to frontload EVs, then horde train the rest.'
     },
     {
         name: 'EV Reducing Berries',
@@ -97,7 +105,7 @@ const commonSpreads = [
     <div>
         <!-- Hero -->
         <section class="relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/5" />
+            <div class="absolute inset-0 bg-linear-to-br from-blue-500/10 via-transparent to-purple-500/5" />
             <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16 text-center">
                 <UBadge color="info" variant="subtle" size="lg" class="mb-4">
                     Guide
@@ -107,8 +115,9 @@ const commonSpreads = [
                 </h1>
                 <p class="text-base sm:text-lg text-muted max-w-2xl mx-auto">
                     Everything you need to know about Effort Values in PokeMMO.
-                    Learn the best horde training locations, useful items, and efficient strategies to build competitive
-                    Pokémon.
+                    Best horde spots that give 10 EVs per battle near PokéCenters, essential items, and efficient
+                    strategies
+                    to build competitive Pokémon.
                 </p>
             </div>
         </section>
@@ -168,23 +177,49 @@ const commonSpreads = [
                     <h3 class="font-bold mb-2">
                         🎯 Horde Training (Primary Method)
                     </h3>
-                    <p class="text-muted text-sm">
+                    <p class="text-muted text-sm mb-3">
                         Hordes are groups of 5 wild Pokémon that appear at once. Defeating all 5 gives EVs from each one
                         —
-                        meaning <strong class="text-default">5× the EVs per battle</strong>. Combined with items like
-                        Macho Brace or Power Items,
-                        you can fully EV train a Pokémon in just a few minutes. Use a Pokémon with a spread move
+                        meaning <strong class="text-default">5× the EVs per battle</strong>. The best spots have
+                        Pokémon that each yield 2 EVs = <strong class="text-default">10 EVs per horde</strong>.
+                        Combined with items, you can fully EV train a stat in minutes. Use a Pokémon with a spread move
                         (Earthquake, Surf, Heat Wave, etc.) to KO the entire horde in one turn.
                     </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs">
+                        <div class="bg-default/5 rounded p-2 text-center">
+                            <p class="font-bold text-default">
+                                No Item
+                            </p>
+                            <p class="text-muted">
+                                10 EVs/horde → 26 hordes
+                            </p>
+                        </div>
+                        <div class="bg-default/5 rounded p-2 text-center">
+                            <p class="font-bold text-yellow-400">
+                                Macho Brace
+                            </p>
+                            <p class="text-muted">
+                                20 EVs/horde → 13 hordes
+                            </p>
+                        </div>
+                        <div class="bg-default/5 rounded p-2 text-center">
+                            <p class="font-bold text-primary">
+                                Power Item
+                            </p>
+                            <p class="text-muted">
+                                50 EVs/horde → 6 hordes
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <div class="bg-elevated rounded-lg p-4">
                     <h3 class="font-bold mb-2">
                         💊 Vitamins (Quick Start)
                     </h3>
                     <p class="text-muted text-sm">
-                        Use Vitamins (Protein, Iron, Calcium, etc.) first to quickly add 100 EVs to a stat.
-                        Each vitamin gives +10 and works up to 100 total EVs per stat. Then horde train the remaining
-                        152.
+                        Use Vitamins (Protein, Iron, Calcium, etc.) to add up to 252 EVs per stat instantly.
+                        Each vitamin gives +10 EVs. If you use 10 Vitamins (100 EVs), you only need to horde train the
+                        remaining 152 EVs — <strong class="text-default">just 4 hordes with a Power Item</strong>.
                         This saves significant time if you have the money.
                     </p>
                 </div>
@@ -224,7 +259,7 @@ const commonSpreads = [
 
         <!-- Training Spots by Stat -->
         <UPageSection title="Best Horde Training Spots"
-            description="Recommended locations for each stat across all PokeMMO regions.">
+            description="All spots below yield 10 EVs per horde (2 EVs × 5 Pokémon), have 100% encounter rate, and are close to a PokéCenter.">
             <div class="space-y-6 max-w-4xl mx-auto">
                 <div v-for="section in statSections" :key="section.name">
                     <div class="flex items-center gap-2 mb-3">
@@ -243,19 +278,22 @@ const commonSpreads = [
                                     <th class="text-left py-2 px-3 font-semibold text-muted">
                                         Location
                                     </th>
+                                    <th class="text-left py-2 px-3 font-semibold text-muted hidden sm:table-cell">
+                                        Method
+                                    </th>
                                     <th class="text-left py-2 px-3 font-semibold text-muted">
                                         Region
                                     </th>
                                     <th class="text-left py-2 px-3 font-semibold text-muted">
-                                        EV Yield
+                                        EVs/Horde
                                     </th>
-                                    <th class="text-left py-2 px-3 font-semibold text-muted hidden sm:table-cell">
-                                        Notes
+                                    <th class="text-left py-2 px-3 font-semibold text-muted hidden md:table-cell">
+                                        Nearest PC
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr v-for="spot in section.spots" :key="spot.pokemon"
+                                <tr v-for="spot in section.spots" :key="spot.pokemon + spot.location"
                                     class="border-b border-default/50">
                                     <td class="py-2 px-3 font-medium">
                                         {{ spot.pokemon }}
@@ -263,16 +301,21 @@ const commonSpreads = [
                                     <td class="py-2 px-3 text-muted">
                                         {{ spot.location }}
                                     </td>
+                                    <td class="py-2 px-3 hidden sm:table-cell">
+                                        <UBadge color="info" variant="subtle" size="xs">
+                                            {{ spot.method }}
+                                        </UBadge>
+                                    </td>
                                     <td class="py-2 px-3">
                                         <UBadge color="neutral" variant="subtle" size="xs">
                                             {{ spot.region }}
                                         </UBadge>
                                     </td>
-                                    <td class="py-2 px-3 text-muted">
+                                    <td class="py-2 px-3 font-mono text-xs text-primary">
                                         {{ spot.evYield }}
                                     </td>
-                                    <td class="py-2 px-3 text-muted text-xs hidden sm:table-cell">
-                                        {{ spot.notes }}
+                                    <td class="py-2 px-3 text-muted text-xs hidden md:table-cell">
+                                        {{ spot.nearPC }}
                                     </td>
                                 </tr>
                             </tbody>
