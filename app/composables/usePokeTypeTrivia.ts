@@ -67,10 +67,31 @@ export function usePokeTypeTrivia() {
   const TOTAL_OPTIONS = 6
 
   function generateOptions(correctTypes: PokemonTypeName[]): PokemonTypeName[] {
-    const wrongTypes = POKEMON_TYPES.filter(t => !correctTypes.includes(t))
+    // Ensure we only use valid types from our known list
+    const validCorrectTypes = correctTypes.filter(t =>
+      (POKEMON_TYPES as readonly string[]).includes(t)
+    )
+
+    // If no valid correct types, fallback to 'normal'
+    if (validCorrectTypes.length === 0) {
+      validCorrectTypes.push('normal')
+    }
+
+    const wrongTypes = POKEMON_TYPES.filter(t => !validCorrectTypes.includes(t))
     const shuffled = [...wrongTypes].sort(() => Math.random() - 0.5)
-    const fillers = shuffled.slice(0, TOTAL_OPTIONS - correctTypes.length)
-    return [...correctTypes, ...fillers].sort(() => Math.random() - 0.5)
+    const fillCount = Math.max(0, TOTAL_OPTIONS - validCorrectTypes.length)
+    const fillers = shuffled.slice(0, fillCount)
+    const options = [...validCorrectTypes, ...fillers].sort(() => Math.random() - 0.5)
+
+    // Safety check: ensure all correct types are in the options
+    for (const ct of validCorrectTypes) {
+      if (!options.includes(ct)) {
+        options.pop()
+        options.push(ct)
+      }
+    }
+
+    return options
   }
 
   function toggleType(type: PokemonTypeName) {
@@ -128,7 +149,18 @@ export function usePokeTypeTrivia() {
     try {
       const pokemon = await fetchRandomPokemon(selectedRegion.value)
       state.pokemon = pokemon
-      state.correctTypes = pokemon.types.map(t => t.type.name as PokemonTypeName)
+
+      // Extract and validate correct types against our known type list
+      const rawTypes = pokemon.types.map(t => t.type.name as PokemonTypeName)
+      state.correctTypes = rawTypes.filter(t =>
+        (POKEMON_TYPES as readonly string[]).includes(t)
+      )
+
+      // Fallback if pokemon has no recognized types
+      if (state.correctTypes.length === 0) {
+        state.correctTypes = ['normal']
+      }
+
       state.optionTypes = generateOptions(state.correctTypes)
       await preloadAllImages(pokemon.id, state.optionTypes)
     } catch (error) {
