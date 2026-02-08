@@ -1,0 +1,14 @@
+node_modules
+.nuxt
+.output
+.git
+.gitignore
+.env
+.env.*
+*.md
+LICENSE
+.vscode
+.idea
+dist
+coverage
+.DS_Store
