@@ -1,0 +1,306 @@
+{
+  "app": {
+    "title": "PokeMMO Knowledge Assist",
+    "brandShort": "PokeMMO Assist",
+    "description": "Improve your Pokémon knowledge through fun trivia games! Test yourself on types, abilities, and more to become a better PokeMMO player.",
+    "typeTrivia": "Type Trivia",
+    "footerText": "PokeMMO Knowledge Assist",
+    "madeBy": "Made by Bruno Lobão",
+    "backToHome": "Back to Home"
+  },
+  "home": {
+    "heroDescription": "Improve your Pokémon knowledge through fun trivia games! Test yourself on types, abilities, and more to become a better PokeMMO player.",
+    "playTrivia": "Play Type Trivia",
+    "viewGuides": "View Guides",
+    "gamesTitle": "Games & Trivias",
+    "gamesDescription": "Challenge yourself with fun games to sharpen your Pokémon knowledge.",
+    "triviaTitle": "Poke Type Trivia",
+    "triviaDescription": "A Pokémon picture and name is shown — guess its type(s)! Choose from 6 random types with a 30-second timer per round.",
+    "playNow": "Play now",
+    "guidesTitle": "Important Knowledges",
+    "guidesDescription": "Essential guides every PokeMMO player should know to get ahead in the game.",
+    "readGuide": "Read guide",
+    "comingSoon": "Coming soon",
+    "guides": {
+      "typeChart": {
+        "title": "Type Matchup Chart",
+        "description": "Master type effectiveness — know what's super effective, not very effective, and immune for every type combination."
+      },
+      "evTraining": {
+        "title": "EV Training Guide",
+        "description": "Learn how to EV train your Pokémon efficiently with the best hotspots and strategies in PokeMMO."
+      },
+      "breeding": {
+        "title": "Breeding Basics",
+        "description": "Understand IVs, natures, egg groups, and how to breed competitive Pokémon from scratch."
+      },
+      "moneyMaking": {
+        "title": "Money Making",
+        "description": "The best methods to earn PokéYen — from Gym reruns to Berry farming and GTL flipping."
+      },
+      "competitiveTiers": {
+        "title": "Competitive Tiers",
+        "description": "Understand OU, UU, NU, and Doubles tiers, banned Pokémon, and the current metagame."
+      },
+      "hiddenAbilities": {
+        "title": "Hidden Abilities",
+        "description": "Where to find hidden ability Pokémon and which ones are the most useful for competitive play."
+      }
+    }
+  },
+  "trivia": {
+    "title": "Poke Type Trivia",
+    "subtitle": "A Pokémon will be shown — guess its type(s)!",
+    "instructions": "You have 30 seconds per question. Select all types that apply and confirm your answer.",
+    "chooseRegion": "Choose a region",
+    "allRegions": "All Regions",
+    "startGame": "Start Game",
+    "loading": "Loading Pokémon...",
+    "round": "Round {n}",
+    "score": "Score: {score} / {total}",
+    "selectTypes": "Select the type(s) of this Pokémon:",
+    "results": "Results:",
+    "confirmAnswer": "Confirm Answer",
+    "timesUp": "Time's up!",
+    "correct": "Correct!",
+    "incorrect": "Incorrect!",
+    "pokemonIs": "{name} is:",
+    "nextPokemon": "Next Pokémon"
+  },
+  "evGuide": {
+    "seoTitle": "EV Training Guide — PokeMMO Knowledge Assist",
+    "seoDescription": "Complete guide to EV training in PokeMMO: best 10 EV/horde spots near PokéCenters, essential items, Power Item math, and efficient strategies for competitive Pokémon.",
+    "badge": "Guide",
+    "title": "📊 EV Training Guide",
+    "description": "Everything you need to know about Effort Values in PokeMMO. Best horde spots that give 10 EVs per battle near PokéCenters, essential items, and efficient strategies to build competitive Pokémon.",
+    "whatAreEvs": "What are EVs?",
+    "evsExplanation": "Effort Values (EVs) are hidden stats that your Pokémon gains by defeating other Pokémon in battle. Every wild or trainer Pokémon gives a specific amount of EVs in one or more stats when defeated. These EVs directly increase your Pokémon's stats, making EV training essential for competitive play.",
+    "maxTotalEvs": "Max total EVs per Pokémon",
+    "maxPerStat": "Max per individual stat",
+    "evStatPoint": "= +1 stat point at Lv. 100",
+    "evSplitExplanation": "In practice, most competitive Pokémon are trained with 252 / 252 / 4 splits — maxing out two key stats and putting the leftover 4 EVs into a third. The stats you choose depend on the Pokémon's role on your team.",
+    "howItWorks": "How EV Training Works in PokeMMO",
+    "howItWorksDesc": "PokeMMO uses horde encounters as the primary EV training method, which is faster than single-battle training.",
+    "hordeTraining": "🎯 Horde Training (Primary Method)",
+    "hordeExplanation": "Hordes are groups of 5 wild Pokémon that appear at once. Defeating all 5 gives EVs from each one — meaning 5× the EVs per battle. The best spots have Pokémon that each yield 2 EVs = 10 EVs per horde. Combined with items, you can fully EV train a stat in minutes. Use a Pokémon with a spread move (Earthquake, Surf, Heat Wave, etc.) to KO the entire horde in one turn.",
+    "noItem": "No Item",
+    "noItemCalc": "10 EVs/horde → 26 hordes",
+    "machoBraceLabel": "Macho Brace",
+    "machoBraceCalc": "20 EVs/horde → 13 hordes",
+    "powerItemLabel": "Power Item",
+    "powerItemCalc": "50 EVs/horde → 6 hordes",
+    "vitaminsTitle": "💊 Vitamins (Quick Start)",
+    "vitaminsExplanation": "Use Vitamins (Protein, Iron, Calcium, etc.) to add up to 252 EVs per stat instantly. Each vitamin gives +10 EVs. If you use 10 Vitamins (100 EVs), you only need to horde train the remaining 152 EVs — just 4 hordes with a Power Item. This saves significant time if you have the money.",
+    "checkEvs": "📱 Check Your EVs",
+    "checkEvsExplanation": "In PokeMMO, you can view your Pokémon's EVs in the Summary screen. The game shows the exact EV distribution in a hexagonal chart, making it easy to track your progress without external tools.",
+    "essentialItems": "Essential Items",
+    "essentialItemsDesc": "These items make EV training faster and more efficient.",
+    "items": {
+      "machoBrace": {
+        "name": "Macho Brace",
+        "effect": "Doubles all EVs gained from battle. Halves Speed during battle. With a 10 EV/horde spot → 20 EVs per horde.",
+        "tip": "Accessible early. Buy from Battle Frontier shops or GTL. Good option before you get Power Items."
+      },
+      "powerItems": {
+        "name": "Power Items",
+        "effect": "Adds +8 EVs in a specific stat per Pokémon defeated. With a 10 EV/horde spot → 50 EVs per horde in the target stat.",
+        "tip": "Power Weight (HP), Power Bracer (Atk), Power Belt (Def), Power Lens (SpA), Power Band (SpD), Power Anklet (Spd). Best EV multiplier in game."
+      },
+      "vitamins": {
+        "name": "Vitamins",
+        "effect": "Gives +10 EVs instantly in a specific stat. Can be used until the stat reaches 252 EVs.",
+        "tip": "HP Up, Protein, Iron, Calcium, Zinc, Carbos. Expensive but saves time. Use first to frontload EVs, then horde train the rest."
+      },
+      "evBerries": {
+        "name": "EV Reducing Berries",
+        "effect": "Removes 10 EVs from a specific stat per berry used.",
+        "tip": "Pomeg (HP), Kelpsy (Atk), Qualot (Def), Hondew (SpA), Grepa (SpD), Tamato (Spd). Essential for fixing EV mistakes."
+      }
+    },
+    "bestSpots": "Best Horde Training Spots",
+    "bestSpotsDesc": "All spots below yield 10 EVs per horde (2 EVs × 5 Pokémon), have 100% encounter rate, and are close to a PokéCenter.",
+    "tableHeaders": {
+      "pokemon": "Pokémon",
+      "location": "Location",
+      "method": "Method",
+      "region": "Region",
+      "evsHorde": "EVs/Horde",
+      "nearestPC": "Nearest PC"
+    },
+    "stats": {
+      "hp": "HP",
+      "attack": "Attack",
+      "defense": "Defense",
+      "spAttack": "Sp. Attack",
+      "spDefense": "Sp. Defense",
+      "speed": "Speed"
+    },
+    "commonSpreads": "Common EV Spreads",
+    "commonSpreadsDesc": "Standard EV distributions for different competitive roles.",
+    "roles": {
+      "physicalSweeper": "Physical Sweeper",
+      "specialSweeper": "Special Sweeper",
+      "physicalTank": "Physical Tank",
+      "specialTank": "Special Tank",
+      "mixedWall": "Mixed Wall",
+      "bulkyAttacker": "Bulky Attacker"
+    },
+    "checklist": "Quick EV Training Checklist",
+    "checklistDesc": "Follow these steps for fast and efficient EV training.",
+    "steps": [
+      "Decide your EV spread based on the Pokémon's role (sweeper, tank, etc.)",
+      "Use Vitamins first — add up to 100 EVs per stat instantly (costs money but saves time)",
+      "Equip Macho Brace or the appropriate Power Item on your Pokémon",
+      "Go to the recommended horde spot for the stat you're training",
+      "Use a strong Pokémon with a spread move (Surf, Earthquake, etc.) at the front of your party",
+      "Put the Pokémon being trained in your party — it gets EVs from Exp Share",
+      "Battle hordes until you hit 252 EVs in that stat (check the Summary screen)",
+      "Repeat for the second stat, then put the remaining 4 EVs wherever you want",
+      "If you made a mistake, use EV-reducing berries to fix it"
+    ],
+    "backToHome": "Back to Home"
+  },
+  "moneyGuide": {
+    "seoTitle": "Money Making Guide — PokeMMO Knowledge Assist",
+    "seoDescription": "Learn the best methods to earn PokéYen in PokeMMO: gym reruns, berry farming, trainer rebattles, GTL trading, and more.",
+    "badge": "Guide",
+    "title": "💰 Money Making Guide",
+    "description": "Master the art of earning PokéYen in PokeMMO. From gym reruns to GTL trading, learn the most effective methods to fund your competitive teams, shinies, and cosmetics.",
+    "whatIsPokeyen": "What is PokéYen?",
+    "pokeyenExplanation": "PokéYen (¥) is the main currency in PokeMMO. You need it for virtually everything: buying items, TMs, vitamins, breeding, entering facilities, cosmetics, and trading on the Global Trade Link (GTL). Unlike single-player Pokémon games where money is abundant, PokeMMO's economy is player-driven and inflationary, making efficient money-making a critical skill.",
+    "avgGymRerun": "Avg. Gym Rerun",
+    "berryFarming": "Berry Farming",
+    "dailyHardcore": "Daily (Hardcore)",
+    "gtlTrading": "GTL Trading",
+    "methodsTitle": "Money Making Methods",
+    "methodsDesc": "Here are the most popular and effective ways to earn PokéYen, ranked by accessibility and consistency.",
+    "methods": {
+      "gymReruns": {
+        "name": "Gym Reruns",
+        "difficulty": "Medium",
+        "income": "~150k–300k per run",
+        "description": "The most popular and consistent money-making method in PokeMMO. After completing a region's storyline, you can rebattle all Gym Leaders. The key is having a fast, optimized team that can sweep each gym quickly.",
+        "details": [
+          "Requires completing the region's Elite Four first",
+          "Gyms reset on a cooldown (approximately 18 hours)",
+          "Use Amulet Coin to double prize money from trainer battles",
+          "Best regions for reruns: Kanto and Unova (highest payouts)",
+          "A good sweep team like Cloyster (Shell Smash + Skill Link) or Cinccino (Technician) can clear fast",
+          "With Amulet Coin, expect ~150k–300k per full gym run depending on the region",
+          "All 4 regions (Kanto, Johto, Hoenn, Sinnoh, Unova) can be run in rotation for maximum income"
+        ]
+      },
+      "trainerRebattles": {
+        "name": "Trainer Rebattles",
+        "difficulty": "Easy",
+        "income": "~100k–200k per cycle",
+        "description": "After beating the storyline, NPC trainers across the map can be rebattled on a cooldown. \"Rich trainers\" (those who give the most money) are the priority targets. Pair with Amulet Coin for double rewards.",
+        "details": [
+          "Trainers reset approximately every 6 hours after being defeated",
+          "Focus on \"Rich Boy\", \"Lady\", and \"Gentleman\" trainer classes — they pay the most",
+          "Amulet Coin is essential to double all earnings",
+          "Search PokeMMO forums for updated rich trainer location maps",
+          "Can be combined with gym reruns in the same session",
+          "Using a Pokémon with Pay Day (e.g., Persian) adds a small bonus per battle"
+        ]
+      },
+      "leppaBerryFarming": {
+        "name": "Leppa Berry Farming",
+        "difficulty": "Easy",
+        "income": "~50k–100k per harvest",
+        "description": "One of the most passive income methods. Leppa Berries are always in demand because they restore PP and are essential for horde EV training. Plant them, wait for the growth cycle, harvest, and sell on the GTL.",
+        "details": [
+          "Leppa Berries take approximately 4–8 hours to grow depending on watering",
+          "Best planting spots: Abundant Shrine area in Unova and various berry plots across regions",
+          "Plant in all available berry slots across multiple regions for maximum yield",
+          "Can be done on multiple accounts for massive passive income",
+          "Takes only ~5 minutes per account to plant and harvest",
+          "Also consider farming Lum Berries (cure all status) which sell well for competitive players"
+        ]
+      },
+      "gtlTrading": {
+        "name": "GTL Trading (Global Trade Link)",
+        "difficulty": "Hard",
+        "income": "Varies — potentially millions",
+        "description": "The GTL is PokeMMO's player-driven marketplace. Experienced players buy low and sell high, flipping items, breeding materials, and competitive Pokémon. This requires market knowledge and initial capital.",
+        "details": [
+          "Study price trends for popular items (vitamins, evolution stones, TMs)",
+          "Buy Pokémon with good IVs/natures cheaply and resell at higher prices",
+          "Breeding materials (Dittos with specific IVs) are always in high demand",
+          "Event items often spike in price after events end — stock up during events",
+          "Requires initial capital and patience to learn the market",
+          "Watch for underpriced listings and snipe good deals",
+          "Use the GTL's filter and sorting systems to find bargains"
+        ]
+      },
+      "pickupFarming": {
+        "name": "Pickup Farming",
+        "difficulty": "Easy",
+        "income": "~30k–80k per hour",
+        "description": "The Pickup ability lets Pokémon randomly find items after battle. A team of 5+ Pokémon with Pickup (like Meowth, Zigzagoon, or Linoone) will accumulate valuable items over time while you do other activities.",
+        "details": [
+          "Higher level Pokémon with Pickup find better items",
+          "At level 41+, you can find Rare Candies, PP Ups, and more",
+          "Best Pokémon: Linoone (fast + Pickup), Meowth (Pickup + Pay Day)",
+          "Works well when combined with EV training or leveling",
+          "Collect and sell valuable items on the GTL periodically",
+          "Passive income — items accumulate while doing other things"
+        ]
+      },
+      "catchingSelling": {
+        "name": "Catching & Selling Pokémon",
+        "difficulty": "Medium",
+        "income": "~50k–500k+ per catch",
+        "description": "Catching wild Pokémon with good IVs, natures, or in useful egg groups and selling them on the GTL. Safari Zone Pokémon in valuable egg groups with good IVs are a classic moneymaker.",
+        "details": [
+          "Focus on Pokémon in popular egg groups (Dragon, Monster, Field)",
+          "Good IVs in even one stat can sell well if the egg group is valuable",
+          "Safari Zone is cost-efficient: entry fee includes 30 balls",
+          "Magikarp (Water 2 + Dragon egg group) with good IVs sell well for breeders",
+          "Ditto with specific IVs are extremely valuable on the GTL",
+          "Check current GTL prices before farming to know what's profitable",
+          "Chansey/Blissey catching for Lucky Eggs is also a viable method"
+        ]
+      },
+      "eventParticipation": {
+        "name": "Event Participation",
+        "difficulty": "Varies",
+        "income": "Event-dependent",
+        "description": "PokeMMO runs regular events such as PvP tournaments, catch events, and seasonal activities (Halloween, Christmas, Lunar New Year). These often give exclusive cosmetics, items, and direct PokéYen rewards.",
+        "details": [
+          "Check the PokeMMO forums and in-game announcements for scheduled events",
+          "Seasonal events (Halloween, Christmas, Lunar New Year) are the biggest",
+          "Raid events give large amounts of money and rare items",
+          "Event-exclusive items and cosmetics can be held and sold later at a premium",
+          "PvP tournaments offer PokéYen prizes and bragging rights",
+          "Participating consistently is one of the best ways for newer players to earn"
+        ]
+      }
+    },
+    "proTips": "Pro Tips",
+    "proTipsDesc": "Quick tips to maximize your income efficiency.",
+    "tips": {
+      "amuletCoin": {
+        "title": "Always Equip Amulet Coin",
+        "description": "Doubles prize money from NPC battles. Note: in PokeMMO, Amulet Coins have durability and eventually break, so stock up."
+      },
+      "combineMethods": {
+        "title": "Combine Methods",
+        "description": "Do gym reruns + trainer rebattles in one session. Farm berries between cooldowns. Run Pickup Pokémon while EV training."
+      },
+      "multipleAccounts": {
+        "title": "Multiple Accounts",
+        "description": "Many veteran players run 2–6 accounts for berry farming and gym reruns simultaneously, multiplying their passive income."
+      },
+      "investTeam": {
+        "title": "Invest in Your Team",
+        "description": "Spending money on a fast sweep team (e.g., Cloyster with Shell Smash) pays for itself quickly through faster gym reruns."
+      },
+      "knowCooldowns": {
+        "title": "Know Your Cooldowns",
+        "description": "Gym reruns (~18h), trainer rebattles (~6h), berry harvests (~6h). Plan your play sessions around these timers."
+      }
+    },
+    "backToHome": "Back to Home"
+  }
+}

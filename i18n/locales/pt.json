@@ -1,0 +1,306 @@
+{
+    "app": {
+        "title": "PokeMMO Knowledge Assist",
+        "brandShort": "PokeMMO Assist",
+        "description": "Melhore seu conhecimento sobre Pokémon com jogos de trivia divertidos! Teste seus conhecimentos sobre tipos, habilidades e muito mais para se tornar um jogador melhor de PokeMMO.",
+        "typeTrivia": "Trivia de Tipos",
+        "footerText": "PokeMMO Knowledge Assist",
+        "madeBy": "Feito por Bruno Lobão",
+        "backToHome": "Voltar ao Início"
+    },
+    "home": {
+        "heroDescription": "Melhore seu conhecimento sobre Pokémon com jogos de trivia divertidos! Teste seus conhecimentos sobre tipos, habilidades e muito mais para se tornar um jogador melhor de PokeMMO.",
+        "playTrivia": "Jogar Trivia de Tipos",
+        "viewGuides": "Ver Guias",
+        "gamesTitle": "Jogos & Trivias",
+        "gamesDescription": "Desafie-se com jogos divertidos para aprimorar seu conhecimento sobre Pokémon.",
+        "triviaTitle": "Poke Type Trivia",
+        "triviaDescription": "Uma imagem e nome de Pokémon são mostrados — adivinhe seu(s) tipo(s)! Escolha entre 6 tipos aleatórios com um timer de 30 segundos por rodada.",
+        "playNow": "Jogar agora",
+        "guidesTitle": "Conhecimentos Importantes",
+        "guidesDescription": "Guias essenciais que todo jogador de PokeMMO deveria conhecer para se destacar no jogo.",
+        "readGuide": "Ler guia",
+        "comingSoon": "Em breve",
+        "guides": {
+            "typeChart": {
+                "title": "Tabela de Tipos",
+                "description": "Domine a efetividade de tipos — saiba o que é super efetivo, pouco efetivo e imune para cada combinação de tipos."
+            },
+            "evTraining": {
+                "title": "Guia de Treino de EVs",
+                "description": "Aprenda a treinar EVs do seu Pokémon de forma eficiente com os melhores spots e estratégias no PokeMMO."
+            },
+            "breeding": {
+                "title": "Basics de Breeding",
+                "description": "Entenda IVs, natures, egg groups e como criar Pokémon competitivos do zero."
+            },
+            "moneyMaking": {
+                "title": "Ganhar Dinheiro",
+                "description": "Os melhores métodos para ganhar PokéYen — de Gym reruns a Berry farming e flipping no GTL."
+            },
+            "competitiveTiers": {
+                "title": "Tiers Competitivos",
+                "description": "Entenda as tiers OU, UU, NU e Doubles, Pokémon banidos e o metagame atual."
+            },
+            "hiddenAbilities": {
+                "title": "Hidden Abilities",
+                "description": "Onde encontrar Pokémon com habilidades ocultas e quais são mais úteis para o competitivo."
+            }
+        }
+    },
+    "trivia": {
+        "title": "Poke Type Trivia",
+        "subtitle": "Um Pokémon será mostrado — adivinhe seu(s) tipo(s)!",
+        "instructions": "Você tem 30 segundos por pergunta. Selecione todos os tipos que se aplicam e confirme sua resposta.",
+        "chooseRegion": "Escolha uma região",
+        "allRegions": "Todas as Regiões",
+        "startGame": "Iniciar Jogo",
+        "loading": "Carregando Pokémon...",
+        "round": "Rodada {n}",
+        "score": "Pontos: {score} / {total}",
+        "selectTypes": "Selecione o(s) tipo(s) deste Pokémon:",
+        "results": "Resultados:",
+        "confirmAnswer": "Confirmar Resposta",
+        "timesUp": "Tempo esgotado!",
+        "correct": "Correto!",
+        "incorrect": "Incorreto!",
+        "pokemonIs": "{name} é:",
+        "nextPokemon": "Próximo Pokémon"
+    },
+    "evGuide": {
+        "seoTitle": "Guia de Treino de EVs — PokeMMO Knowledge Assist",
+        "seoDescription": "Guia completo de treino de EVs no PokeMMO: melhores spots de 10 EVs por horda perto de PokéCenters, itens essenciais, cálculos com Power Items e estratégias eficientes.",
+        "badge": "Guia",
+        "title": "📊 Guia de Treino de EVs",
+        "description": "Tudo o que você precisa saber sobre Effort Values no PokeMMO. Melhores spots de horda que dão 10 EVs por batalha perto de PokéCenters, itens essenciais e estratégias eficientes para criar Pokémon competitivos.",
+        "whatAreEvs": "O que são EVs?",
+        "evsExplanation": "Effort Values (EVs) são stats ocultos que seu Pokémon ganha ao derrotar outros Pokémon em batalha. Cada Pokémon selvagem ou de treinador dá uma quantidade específica de EVs em um ou mais stats quando derrotado. Esses EVs aumentam diretamente os stats do seu Pokémon, tornando o treino de EVs essencial para o competitivo.",
+        "maxTotalEvs": "Máximo total de EVs por Pokémon",
+        "maxPerStat": "Máximo por stat individual",
+        "evStatPoint": "= +1 ponto de stat no Lv. 100",
+        "evSplitExplanation": "Na prática, a maioria dos Pokémon competitivos são treinados com distribuições de 252 / 252 / 4 — maximizando dois stats principais e colocando os 4 EVs restantes em um terceiro. Os stats que você escolhe dependem da função do Pokémon no seu time.",
+        "howItWorks": "Como Funciona o Treino de EVs no PokeMMO",
+        "howItWorksDesc": "O PokeMMO usa encontros de horda como método principal de treino de EVs, que é mais rápido que treino em batalhas individuais.",
+        "hordeTraining": "🎯 Treino com Hordas (Método Principal)",
+        "hordeExplanation": "Hordas são grupos de 5 Pokémon selvagens que aparecem de uma vez. Derrotar todos os 5 dá EVs de cada um — ou seja, 5× os EVs por batalha. Os melhores spots têm Pokémon que dão 2 EVs cada = 10 EVs por horda. Combinado com itens, você pode treinar completamente um stat em minutos. Use um Pokémon com golpe em área (Earthquake, Surf, Heat Wave, etc.) para nocautear toda a horda em um turno.",
+        "noItem": "Sem Item",
+        "noItemCalc": "10 EVs/horda → 26 hordas",
+        "machoBraceLabel": "Macho Brace",
+        "machoBraceCalc": "20 EVs/horda → 13 hordas",
+        "powerItemLabel": "Power Item",
+        "powerItemCalc": "50 EVs/horda → 6 hordas",
+        "vitaminsTitle": "💊 Vitaminas (Início Rápido)",
+        "vitaminsExplanation": "Use Vitaminas (Protein, Iron, Calcium, etc.) para adicionar até 252 EVs por stat instantaneamente. Cada vitamina dá +10 EVs. Se você usar 10 Vitaminas (100 EVs), só precisa treinar com hordas os 152 EVs restantes — apenas 4 hordas com um Power Item. Isso economiza bastante tempo se você tiver dinheiro.",
+        "checkEvs": "📱 Confira seus EVs",
+        "checkEvsExplanation": "No PokeMMO, você pode ver os EVs do seu Pokémon na tela de Resumo. O jogo mostra a distribuição exata de EVs em um gráfico hexagonal, facilitando o acompanhamento do progresso sem ferramentas externas.",
+        "essentialItems": "Itens Essenciais",
+        "essentialItemsDesc": "Esses itens tornam o treino de EVs mais rápido e eficiente.",
+        "items": {
+            "machoBrace": {
+                "name": "Macho Brace",
+                "effect": "Dobra todos os EVs ganhos em batalha. Reduz Speed durante a batalha pela metade. Com um spot de 10 EVs/horda → 20 EVs por horda.",
+                "tip": "Acessível cedo. Compre nas lojas da Battle Frontier ou no GTL. Boa opção antes de conseguir Power Items."
+            },
+            "powerItems": {
+                "name": "Power Items",
+                "effect": "Adiciona +8 EVs em um stat específico por Pokémon derrotado. Com um spot de 10 EVs/horda → 50 EVs por horda no stat alvo.",
+                "tip": "Power Weight (HP), Power Bracer (Atk), Power Belt (Def), Power Lens (SpA), Power Band (SpD), Power Anklet (Spd). Melhor multiplicador de EVs do jogo."
+            },
+            "vitamins": {
+                "name": "Vitaminas",
+                "effect": "Dá +10 EVs instantaneamente em um stat específico. Pode ser usado até o stat atingir 252 EVs.",
+                "tip": "HP Up, Protein, Iron, Calcium, Zinc, Carbos. Caro mas economiza tempo. Use primeiro para adiantar EVs, depois treine com hordas o restante."
+            },
+            "evBerries": {
+                "name": "Berries Redutoras de EV",
+                "effect": "Remove 10 EVs de um stat específico por berry usada.",
+                "tip": "Pomeg (HP), Kelpsy (Atk), Qualot (Def), Hondew (SpA), Grepa (SpD), Tamato (Spd). Essenciais para corrigir erros de EV."
+            }
+        },
+        "bestSpots": "Melhores Spots de Treino com Horda",
+        "bestSpotsDesc": "Todos os spots abaixo rendem 10 EVs por horda (2 EVs × 5 Pokémon), têm 100% de taxa de encontro e ficam perto de um PokéCenter.",
+        "tableHeaders": {
+            "pokemon": "Pokémon",
+            "location": "Local",
+            "method": "Método",
+            "region": "Região",
+            "evsHorde": "EVs/Horda",
+            "nearestPC": "PC Mais Próximo"
+        },
+        "stats": {
+            "hp": "HP",
+            "attack": "Ataque",
+            "defense": "Defesa",
+            "spAttack": "Atq. Especial",
+            "spDefense": "Def. Especial",
+            "speed": "Velocidade"
+        },
+        "commonSpreads": "Distribuições de EV Comuns",
+        "commonSpreadsDesc": "Distribuições padrão de EVs para diferentes funções competitivas.",
+        "roles": {
+            "physicalSweeper": "Sweeper Físico",
+            "specialSweeper": "Sweeper Especial",
+            "physicalTank": "Tank Físico",
+            "specialTank": "Tank Especial",
+            "mixedWall": "Wall Misto",
+            "bulkyAttacker": "Atacante Bulk"
+        },
+        "checklist": "Checklist Rápido de Treino de EVs",
+        "checklistDesc": "Siga estes passos para um treino de EVs rápido e eficiente.",
+        "steps": [
+            "Decida sua distribuição de EVs baseada na função do Pokémon (sweeper, tank, etc.)",
+            "Use Vitaminas primeiro — adicione até 100 EVs por stat instantaneamente (custa dinheiro mas economiza tempo)",
+            "Equipe Macho Brace ou o Power Item apropriado no seu Pokémon",
+            "Vá ao spot de horda recomendado para o stat que você está treinando",
+            "Use um Pokémon forte com golpe em área (Surf, Earthquake, etc.) na frente do seu time",
+            "Coloque o Pokémon que está sendo treinado no seu time — ele ganha EVs pelo Exp Share",
+            "Batalhe hordas até atingir 252 EVs naquele stat (confira na tela de Resumo)",
+            "Repita para o segundo stat, depois coloque os 4 EVs restantes onde quiser",
+            "Se cometer um erro, use berries redutoras de EV para corrigir"
+        ],
+        "backToHome": "Voltar ao Início"
+    },
+    "moneyGuide": {
+        "seoTitle": "Guia para Ganhar Dinheiro — PokeMMO Knowledge Assist",
+        "seoDescription": "Aprenda os melhores métodos para ganhar PokéYen no PokeMMO: gym reruns, berry farming, trainer rebattles, trading no GTL e mais.",
+        "badge": "Guia",
+        "title": "💰 Guia para Ganhar Dinheiro",
+        "description": "Domine a arte de ganhar PokéYen no PokeMMO. De gym reruns a trading no GTL, aprenda os métodos mais eficazes para financiar seus times competitivos, shinies e cosméticos.",
+        "whatIsPokeyen": "O que é PokéYen?",
+        "pokeyenExplanation": "PokéYen (¥) é a moeda principal no PokeMMO. Você precisa dela para praticamente tudo: comprar itens, TMs, vitaminas, breeding, entrar em facilities, cosméticos e negociar no Global Trade Link (GTL). Diferente dos jogos single-player de Pokémon onde dinheiro é abundante, a economia do PokeMMO é controlada pelos jogadores e inflacionária, tornando a geração eficiente de dinheiro uma habilidade crítica.",
+        "avgGymRerun": "Média Gym Rerun",
+        "berryFarming": "Berry Farming",
+        "dailyHardcore": "Diário (Hardcore)",
+        "gtlTrading": "Trading GTL",
+        "methodsTitle": "Métodos para Ganhar Dinheiro",
+        "methodsDesc": "Aqui estão as formas mais populares e eficazes de ganhar PokéYen, ranqueadas por acessibilidade e consistência.",
+        "methods": {
+            "gymReruns": {
+                "name": "Gym Reruns",
+                "difficulty": "Médio",
+                "income": "~150k–300k por run",
+                "description": "O método mais popular e consistente de ganhar dinheiro no PokeMMO. Após completar a história de uma região, você pode rebatalhar todos os Líderes de Ginásio. O segredo é ter um time rápido e otimizado que consiga varrer cada gym rapidamente.",
+                "details": [
+                    "Requer ter completado a Elite Four da região primeiro",
+                    "Gyms resetam com um cooldown (aproximadamente 18 horas)",
+                    "Use Amulet Coin para dobrar o dinheiro de prêmio de batalhas contra treinadores",
+                    "Melhores regiões para reruns: Kanto e Unova (maiores pagamentos)",
+                    "Um bom time de sweep como Cloyster (Shell Smash + Skill Link) ou Cinccino (Technician) pode limpar rápido",
+                    "Com Amulet Coin, espere ~150k–300k por gym run completa dependendo da região",
+                    "Todas as regiões (Kanto, Johto, Hoenn, Sinnoh, Unova) podem ser rodadas em rotação para renda máxima"
+                ]
+            },
+            "trainerRebattles": {
+                "name": "Trainer Rebattles",
+                "difficulty": "Fácil",
+                "income": "~100k–200k por ciclo",
+                "description": "Após vencer a história, treinadores NPC pelo mapa podem ser rebatalhados com um cooldown. \"Rich trainers\" (os que dão mais dinheiro) são os alvos prioritários. Combine com Amulet Coin para dobrar as recompensas.",
+                "details": [
+                    "Treinadores resetam aproximadamente a cada 6 horas após serem derrotados",
+                    "Foque nas classes \"Rich Boy\", \"Lady\" e \"Gentleman\" — eles pagam mais",
+                    "Amulet Coin é essencial para dobrar todos os ganhos",
+                    "Pesquise nos fóruns do PokeMMO por mapas atualizados de rich trainers",
+                    "Pode ser combinado com gym reruns na mesma sessão",
+                    "Usar um Pokémon com Pay Day (ex: Persian) adiciona um bônus pequeno por batalha"
+                ]
+            },
+            "leppaBerryFarming": {
+                "name": "Leppa Berry Farming",
+                "difficulty": "Fácil",
+                "income": "~50k–100k por colheita",
+                "description": "Um dos métodos mais passivos de renda. Leppa Berries estão sempre em demanda porque restauram PP e são essenciais para treino de EVs com horda. Plante-as, espere o ciclo de crescimento, colha e venda no GTL.",
+                "details": [
+                    "Leppa Berries levam aproximadamente 4–8 horas para crescer dependendo da rega",
+                    "Melhores spots de plantio: área do Abundant Shrine em Unova e vários plots de berry em outras regiões",
+                    "Plante em todos os slots de berry disponíveis em múltiplas regiões para rendimento máximo",
+                    "Pode ser feito em múltiplas contas para renda passiva massiva",
+                    "Leva apenas ~5 minutos por conta para plantar e colher",
+                    "Considere também farmar Lum Berries (curam todos os status) que vendem bem para jogadores competitivos"
+                ]
+            },
+            "gtlTrading": {
+                "name": "Trading no GTL (Global Trade Link)",
+                "difficulty": "Difícil",
+                "income": "Varia — potencialmente milhões",
+                "description": "O GTL é o marketplace controlado pelos jogadores do PokeMMO. Jogadores experientes compram barato e vendem caro, fazendo flip de itens, materiais de breeding e Pokémon competitivos. Requer conhecimento de mercado e capital inicial.",
+                "details": [
+                    "Estude tendências de preço para itens populares (vitaminas, evolution stones, TMs)",
+                    "Compre Pokémon com bons IVs/natures por preços baixos e revenda por preços mais altos",
+                    "Materiais de breeding (Dittos com IVs específicos) estão sempre em alta demanda",
+                    "Itens de evento frequentemente disparam de preço após os eventos acabarem — estoque durante eventos",
+                    "Requer capital inicial e paciência para aprender o mercado",
+                    "Fique de olho em listagens com preço abaixo do mercado e snipe boas ofertas",
+                    "Use os filtros e sistemas de ordenação do GTL para encontrar pechinchas"
+                ]
+            },
+            "pickupFarming": {
+                "name": "Pickup Farming",
+                "difficulty": "Fácil",
+                "income": "~30k–80k por hora",
+                "description": "A habilidade Pickup permite que Pokémon encontrem itens aleatoriamente após batalhas. Um time de 5+ Pokémon com Pickup (como Meowth, Zigzagoon ou Linoone) acumulará itens valiosos com o tempo enquanto você faz outras atividades.",
+                "details": [
+                    "Pokémon de nível mais alto com Pickup encontram itens melhores",
+                    "No nível 41+, você pode encontrar Rare Candies, PP Ups e mais",
+                    "Melhores Pokémon: Linoone (rápido + Pickup), Meowth (Pickup + Pay Day)",
+                    "Funciona bem quando combinado com treino de EVs ou leveling",
+                    "Colete e venda itens valiosos no GTL periodicamente",
+                    "Renda passiva — itens acumulam enquanto você faz outras coisas"
+                ]
+            },
+            "catchingSelling": {
+                "name": "Captura & Venda de Pokémon",
+                "difficulty": "Médio",
+                "income": "~50k–500k+ por captura",
+                "description": "Capturar Pokémon selvagens com bons IVs, natures ou em egg groups úteis e vendê-los no GTL. Pokémon do Safari Zone em egg groups valiosos com bons IVs são um clássico para ganhar dinheiro.",
+                "details": [
+                    "Foque em Pokémon de egg groups populares (Dragon, Monster, Field)",
+                    "Bons IVs em apenas um stat já podem vender bem se o egg group for valioso",
+                    "Safari Zone é custo-eficiente: taxa de entrada inclui 30 bolas",
+                    "Magikarp (egg group Water 2 + Dragon) com bons IVs vendem bem para breeders",
+                    "Ditto com IVs específicos são extremamente valiosos no GTL",
+                    "Verifique preços atuais no GTL antes de farmar para saber o que é lucrativo",
+                    "Capturar Chansey/Blissey para Lucky Eggs também é um método viável"
+                ]
+            },
+            "eventParticipation": {
+                "name": "Participação em Eventos",
+                "difficulty": "Varia",
+                "income": "Depende do evento",
+                "description": "O PokeMMO realiza eventos regulares como torneios PvP, eventos de captura e atividades sazonais (Halloween, Natal, Ano Novo Lunar). Estes frequentemente dão cosméticos exclusivos, itens e recompensas diretas de PokéYen.",
+                "details": [
+                    "Verifique os fóruns do PokeMMO e anúncios in-game para eventos agendados",
+                    "Eventos sazonais (Halloween, Natal, Ano Novo Lunar) são os maiores",
+                    "Eventos de raid dão grandes quantidades de dinheiro e itens raros",
+                    "Itens e cosméticos exclusivos de eventos podem ser guardados e vendidos depois com ágio",
+                    "Torneios PvP oferecem prêmios em PokéYen e prestígio",
+                    "Participar consistentemente é uma das melhores formas para jogadores mais novos ganharem dinheiro"
+                ]
+            }
+        },
+        "proTips": "Dicas Pro",
+        "proTipsDesc": "Dicas rápidas para maximizar a eficiência da sua renda.",
+        "tips": {
+            "amuletCoin": {
+                "title": "Sempre Equipe Amulet Coin",
+                "description": "Dobra o dinheiro de prêmio de batalhas NPC. Nota: no PokeMMO, Amulet Coins têm durabilidade e eventualmente quebram, então estoque."
+            },
+            "combineMethods": {
+                "title": "Combine Métodos",
+                "description": "Faça gym reruns + trainer rebattles na mesma sessão. Farme berries entre cooldowns. Rode Pokémon com Pickup enquanto treina EVs."
+            },
+            "multipleAccounts": {
+                "title": "Múltiplas Contas",
+                "description": "Muitos jogadores veteranos rodam 2–6 contas para berry farming e gym reruns simultaneamente, multiplicando a renda passiva."
+            },
+            "investTeam": {
+                "title": "Invista no Seu Time",
+                "description": "Gastar dinheiro em um time de sweep rápido (ex: Cloyster com Shell Smash) se paga rapidamente através de gym reruns mais rápidas."
+            },
+            "knowCooldowns": {
+                "title": "Conheça Seus Cooldowns",
+                "description": "Gym reruns (~18h), trainer rebattles (~6h), colheita de berries (~6h). Planeje suas sessões de jogo em torno desses timers."
+            }
+        },
+        "backToHome": "Voltar ao Início"
+    }
+}

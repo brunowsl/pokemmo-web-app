@@ -1,149 +1,99 @@
 <script setup lang="ts">
+const { t } = useI18n()
+
 useSeoMeta({
-  title: 'Money Making Guide — PokeMMO Knowledge Assist',
-  description: 'Learn the best methods to earn PokéYen in PokeMMO: gym reruns, berry farming, trainer rebattles, GTL trading, and more.'
+  title: () => t('moneyGuide.seoTitle'),
+  description: () => t('moneyGuide.seoDescription')
 })
 
-const methods = [
+const methods = computed(() => [
   {
-    name: 'Gym Reruns',
-    difficulty: 'Medium',
-    income: '~150k–300k per run',
+    name: t('moneyGuide.methods.gymReruns.name'),
+    difficulty: t('moneyGuide.methods.gymReruns.difficulty'),
+    income: t('moneyGuide.methods.gymReruns.income'),
     icon: 'i-lucide-swords',
     color: 'text-red-400',
-    description: 'The most popular and consistent money-making method in PokeMMO. After completing a region\'s storyline, you can rebattle all Gym Leaders. The key is having a fast, optimized team that can sweep each gym quickly.',
-    details: [
-      'Requires completing the region\'s Elite Four first',
-      'Gyms reset on a cooldown (approximately 18 hours)',
-      'Use Amulet Coin to double prize money from trainer battles',
-      'Best regions for reruns: Kanto and Unova (highest payouts)',
-      'A good sweep team like Cloyster (Shell Smash + Skill Link) or Cinccino (Technician) can clear fast',
-      'With Amulet Coin, expect ~150k–300k per full gym run depending on the region',
-      'All 4 regions (Kanto, Johto, Hoenn, Sinnoh, Unova) can be run in rotation for maximum income'
-    ]
+    description: t('moneyGuide.methods.gymReruns.description'),
+    details: t('moneyGuide.methods.gymReruns.details', { returnObjects: true }) as unknown as string[]
   },
   {
-    name: 'Trainer Rebattles',
-    difficulty: 'Easy',
-    income: '~100k–200k per cycle',
+    name: t('moneyGuide.methods.trainerRebattles.name'),
+    difficulty: t('moneyGuide.methods.trainerRebattles.difficulty'),
+    income: t('moneyGuide.methods.trainerRebattles.income'),
     icon: 'i-lucide-user',
     color: 'text-blue-400',
-    description: 'After beating the storyline, NPC trainers across the map can be rebattled on a cooldown. "Rich trainers" (those who give the most money) are the priority targets. Pair with Amulet Coin for double rewards.',
-    details: [
-      'Trainers reset approximately every 6 hours after being defeated',
-      'Focus on "Rich Boy", "Lady", and "Gentleman" trainer classes — they pay the most',
-      'Amulet Coin is essential to double all earnings',
-      'Search PokeMMO forums for updated rich trainer location maps',
-      'Can be combined with gym reruns in the same session',
-      'Using a Pokémon with Pay Day (e.g., Persian) adds a small bonus per battle'
-    ]
+    description: t('moneyGuide.methods.trainerRebattles.description'),
+    details: t('moneyGuide.methods.trainerRebattles.details', { returnObjects: true }) as unknown as string[]
   },
   {
-    name: 'Leppa Berry Farming',
-    difficulty: 'Easy',
-    income: '~50k–100k per harvest',
+    name: t('moneyGuide.methods.leppaBerryFarming.name'),
+    difficulty: t('moneyGuide.methods.leppaBerryFarming.difficulty'),
+    income: t('moneyGuide.methods.leppaBerryFarming.income'),
     icon: 'i-lucide-flower-2',
     color: 'text-green-400',
-    description: 'One of the most passive income methods. Leppa Berries are always in demand because they restore PP and are essential for horde EV training. Plant them, wait for the growth cycle, harvest, and sell on the GTL.',
-    details: [
-      'Leppa Berries take approximately 4–8 hours to grow depending on watering',
-      'Best planting spots: Abundant Shrine area in Unova and various berry plots across regions',
-      'Plant in all available berry slots across multiple regions for maximum yield',
-      'Can be done on multiple accounts for massive passive income',
-      'Takes only ~5 minutes per account to plant and harvest',
-      'Also consider farming Lum Berries (cure all status) which sell well for competitive players'
-    ]
+    description: t('moneyGuide.methods.leppaBerryFarming.description'),
+    details: t('moneyGuide.methods.leppaBerryFarming.details', { returnObjects: true }) as unknown as string[]
   },
   {
-    name: 'GTL Trading (Global Trade Link)',
-    difficulty: 'Hard',
-    income: 'Varies — potentially millions',
+    name: t('moneyGuide.methods.gtlTrading.name'),
+    difficulty: t('moneyGuide.methods.gtlTrading.difficulty'),
+    income: t('moneyGuide.methods.gtlTrading.income'),
     icon: 'i-lucide-bar-chart-3',
     color: 'text-purple-400',
-    description: 'The GTL is PokeMMO\'s player-driven marketplace. Experienced players buy low and sell high, flipping items, breeding materials, and competitive Pokémon. This requires market knowledge and initial capital.',
-    details: [
-      'Study price trends for popular items (vitamins, evolution stones, TMs)',
-      'Buy Pokémon with good IVs/natures cheaply and resell at higher prices',
-      'Breeding materials (Dittos with specific IVs) are always in high demand',
-      'Event items often spike in price after events end — stock up during events',
-      'Requires initial capital and patience to learn the market',
-      'Watch for underpriced listings and snipe good deals',
-      'Use the GTL\'s filter and sorting systems to find bargains'
-    ]
+    description: t('moneyGuide.methods.gtlTrading.description'),
+    details: t('moneyGuide.methods.gtlTrading.details', { returnObjects: true }) as unknown as string[]
   },
   {
-    name: 'Pickup Farming',
-    difficulty: 'Easy',
-    income: '~30k–80k per hour',
+    name: t('moneyGuide.methods.pickupFarming.name'),
+    difficulty: t('moneyGuide.methods.pickupFarming.difficulty'),
+    income: t('moneyGuide.methods.pickupFarming.income'),
     icon: 'i-lucide-package',
     color: 'text-yellow-400',
-    description: 'The Pickup ability lets Pokémon randomly find items after battle. A team of 5+ Pokémon with Pickup (like Meowth, Zigzagoon, or Linoone) will accumulate valuable items over time while you do other activities.',
-    details: [
-      'Higher level Pokémon with Pickup find better items',
-      'At level 41+, you can find Rare Candies, PP Ups, and more',
-      'Best Pokémon: Linoone (fast + Pickup), Meowth (Pickup + Pay Day)',
-      'Works well when combined with EV training or leveling',
-      'Collect and sell valuable items on the GTL periodically',
-      'Passive income — items accumulate while doing other things'
-    ]
+    description: t('moneyGuide.methods.pickupFarming.description'),
+    details: t('moneyGuide.methods.pickupFarming.details', { returnObjects: true }) as unknown as string[]
   },
   {
-    name: 'Catching & Selling Pokémon',
-    difficulty: 'Medium',
-    income: '~50k–500k+ per catch',
+    name: t('moneyGuide.methods.catchingSelling.name'),
+    difficulty: t('moneyGuide.methods.catchingSelling.difficulty'),
+    income: t('moneyGuide.methods.catchingSelling.income'),
     icon: 'i-lucide-target',
     color: 'text-cyan-400',
-    description: 'Catching wild Pokémon with good IVs, natures, or in useful egg groups and selling them on the GTL. Safari Zone Pokémon in valuable egg groups with good IVs are a classic moneymaker.',
-    details: [
-      'Focus on Pokémon in popular egg groups (Dragon, Monster, Field)',
-      'Good IVs in even one stat can sell well if the egg group is valuable',
-      'Safari Zone is cost-efficient: entry fee includes 30 balls',
-      'Magikarp (Water 2 + Dragon egg group) with good IVs sell well for breeders',
-      'Ditto with specific IVs are extremely valuable on the GTL',
-      'Check current GTL prices before farming to know what\'s profitable',
-      'Chansey/Blissey catching for Lucky Eggs is also a viable method'
-    ]
+    description: t('moneyGuide.methods.catchingSelling.description'),
+    details: t('moneyGuide.methods.catchingSelling.details', { returnObjects: true }) as unknown as string[]
   },
   {
-    name: 'Event Participation',
-    difficulty: 'Varies',
-    income: 'Event-dependent',
+    name: t('moneyGuide.methods.eventParticipation.name'),
+    difficulty: t('moneyGuide.methods.eventParticipation.difficulty'),
+    income: t('moneyGuide.methods.eventParticipation.income'),
     icon: 'i-lucide-calendar',
     color: 'text-orange-400',
-    description: 'PokeMMO runs regular events such as PvP tournaments, catch events, and seasonal activities (Halloween, Christmas, Lunar New Year). These often give exclusive cosmetics, items, and direct PokéYen rewards.',
-    details: [
-      'Check the PokeMMO forums and in-game announcements for scheduled events',
-      'Seasonal events (Halloween, Christmas, Lunar New Year) are the biggest',
-      'Raid events give large amounts of money and rare items',
-      'Event-exclusive items and cosmetics can be held and sold later at a premium',
-      'PvP tournaments offer PokéYen prizes and bragging rights',
-      'Participating consistently is one of the best ways for newer players to earn'
-    ]
+    description: t('moneyGuide.methods.eventParticipation.description'),
+    details: t('moneyGuide.methods.eventParticipation.details', { returnObjects: true }) as unknown as string[]
   }
-]
+])
 
-const tips = [
+const tips = computed(() => [
   {
-    title: 'Always Equip Amulet Coin',
-    description: 'Doubles prize money from NPC battles. Note: in PokeMMO, Amulet Coins have durability and eventually break, so stock up.'
+    title: t('moneyGuide.tips.amuletCoin.title'),
+    description: t('moneyGuide.tips.amuletCoin.description')
   },
   {
-    title: 'Combine Methods',
-    description: 'Do gym reruns + trainer rebattles in one session. Farm berries between cooldowns. Run Pickup Pokémon while EV training.'
+    title: t('moneyGuide.tips.combineMethods.title'),
+    description: t('moneyGuide.tips.combineMethods.description')
   },
   {
-    title: 'Multiple Accounts',
-    description: 'Many veteran players run 2–6 accounts for berry farming and gym reruns simultaneously, multiplying their passive income.'
+    title: t('moneyGuide.tips.multipleAccounts.title'),
+    description: t('moneyGuide.tips.multipleAccounts.description')
   },
   {
-    title: 'Invest in Your Team',
-    description: 'Spending money on a fast sweep team (e.g., Cloyster with Shell Smash) pays for itself quickly through faster gym reruns.'
+    title: t('moneyGuide.tips.investTeam.title'),
+    description: t('moneyGuide.tips.investTeam.description')
   },
   {
-    title: 'Know Your Cooldowns',
-    description: 'Gym reruns (~18h), trainer rebattles (~6h), berry harvests (~6h). Plan your play sessions around these timers.'
+    title: t('moneyGuide.tips.knowCooldowns.title'),
+    description: t('moneyGuide.tips.knowCooldowns.description')
   }
-]
+])
 </script>
 
 <template>
@@ -153,14 +103,13 @@ const tips = [
       <div class="absolute inset-0 bg-linear-to-br from-yellow-500/10 via-transparent to-green-500/5" />
       <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16 text-center">
         <UBadge color="warning" variant="subtle" size="lg" class="mb-4">
-          Guide
+          {{ $t('moneyGuide.badge') }}
         </UBadge>
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
-          💰 Money Making Guide
+          {{ $t('moneyGuide.title') }}
         </h1>
         <p class="text-base sm:text-lg text-muted max-w-2xl mx-auto">
-          Master the art of earning PokéYen in PokeMMO. From gym reruns to GTL trading,
-          learn the most effective methods to fund your competitive teams, shinies, and cosmetics.
+          {{ $t('moneyGuide.description') }}
         </p>
       </div>
     </section>
@@ -169,13 +118,10 @@ const tips = [
     <UPageSection>
       <div class="max-w-3xl mx-auto">
         <h2 class="text-2xl font-bold mb-4">
-          What is PokéYen?
+          {{ $t('moneyGuide.whatIsPokeyen') }}
         </h2>
         <p class="text-muted mb-4">
-          PokéYen (¥) is the main currency in PokeMMO. You need it for virtually everything:
-          buying items, TMs, vitamins, breeding, entering facilities, cosmetics, and trading
-          on the Global Trade Link (GTL). Unlike single-player Pokémon games where money is abundant,
-          PokeMMO's economy is player-driven and inflationary, making efficient money-making a critical skill.
+          {{ $t('moneyGuide.pokeyenExplanation') }}
         </p>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
           <div class="bg-elevated rounded-lg p-3 text-center">
@@ -183,7 +129,7 @@ const tips = [
               ~200k
             </p>
             <p class="text-xs text-muted">
-              Avg. Gym Rerun
+              {{ $t('moneyGuide.avgGymRerun') }}
             </p>
           </div>
           <div class="bg-elevated rounded-lg p-3 text-center">
@@ -191,7 +137,7 @@ const tips = [
               100k/day
             </p>
             <p class="text-xs text-muted">
-              Berry Farming
+              {{ $t('moneyGuide.berryFarming') }}
             </p>
           </div>
           <div class="bg-elevated rounded-lg p-3 text-center">
@@ -199,7 +145,7 @@ const tips = [
               2-5M
             </p>
             <p class="text-xs text-muted">
-              Daily (Hardcore)
+              {{ $t('moneyGuide.dailyHardcore') }}
             </p>
           </div>
           <div class="bg-elevated rounded-lg p-3 text-center">
@@ -207,7 +153,7 @@ const tips = [
               ∞
             </p>
             <p class="text-xs text-muted">
-              GTL Trading
+              {{ $t('moneyGuide.gtlTrading') }}
             </p>
           </div>
         </div>
@@ -215,8 +161,7 @@ const tips = [
     </UPageSection>
 
     <!-- Methods -->
-    <UPageSection title="Money Making Methods"
-      description="Here are the most popular and effective ways to earn PokéYen, ranked by accessibility and consistency.">
+    <UPageSection :title="$t('moneyGuide.methodsTitle')" :description="$t('moneyGuide.methodsDesc')">
       <div class="space-y-6 max-w-4xl mx-auto">
         <UCard v-for="method in methods" :key="method.name">
           <template #header>
@@ -253,7 +198,7 @@ const tips = [
     </UPageSection>
 
     <!-- Pro Tips -->
-    <UPageSection title="Pro Tips" description="Quick tips to maximize your income efficiency.">
+    <UPageSection :title="$t('moneyGuide.proTips')" :description="$t('moneyGuide.proTipsDesc')">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
         <UCard v-for="tip in tips" :key="tip.title">
           <template #header>
@@ -270,7 +215,7 @@ const tips = [
 
     <!-- Back link -->
     <div class="text-center pb-8">
-      <UButton to="/" label="Back to Home" icon="i-lucide-arrow-left" variant="ghost" />
+      <UButton to="/" :label="$t('moneyGuide.backToHome')" icon="i-lucide-arrow-left" variant="ghost" />
     </div>
   </div>
 </template>
