@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { t } = useI18n()
+const { t, tm } = useI18n()
 
 useSeoMeta({
     title: () => t('evGuide.seoTitle'),
@@ -102,7 +102,8 @@ const commonSpreads = computed(() => [
     { role: t('evGuide.roles.bulkyAttacker'), spread: '252 HP / 252 Atk / 4 Def', example: 'Conkeldurr, Breloom, Metagross' }
 ])
 
-const steps = computed(() => t('evGuide.steps', { returnObjects: true }) as unknown as string[])
+// Get the total number of steps from the translation
+const stepsCount = 9 // Total number of steps in the checklist
 </script>
 
 <template>
@@ -329,13 +330,13 @@ const steps = computed(() => t('evGuide.steps', { returnObjects: true }) as unkn
         <!-- Step by step -->
         <UPageSection :title="$t('evGuide.checklist')" :description="$t('evGuide.checklistDesc')">
             <div class="max-w-2xl mx-auto space-y-3">
-                <div v-for="(step, i) in steps" :key="i" class="flex items-start gap-3">
+                <div v-for="i in stepsCount" :key="i" class="flex items-start gap-3">
                     <span
                         class="shrink-0 w-7 h-7 rounded-full bg-primary/20 text-primary text-xs font-bold flex items-center justify-center">
-                        {{ i + 1 }}
+                        {{ i }}
                     </span>
                     <p class="text-muted text-sm pt-1">
-                        {{ step }}
+                        {{ $t(`evGuide.steps[${i - 1}]`) }}
                     </p>
                 </div>
             </div>

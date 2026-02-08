@@ -6,6 +6,15 @@ useSeoMeta({
   description: () => t('moneyGuide.seoDescription')
 })
 
+// Helper function to get array items from translation by accessing each index directly
+const getDetailsArray = (key: string, count: number): string[] => {
+  const details: string[] = []
+  for (let i = 0; i < count; i++) {
+    details.push(t(`${key}[${i}]`))
+  }
+  return details
+}
+
 const methods = computed(() => [
   {
     name: t('moneyGuide.methods.gymReruns.name'),
@@ -14,7 +23,7 @@ const methods = computed(() => [
     icon: 'i-lucide-swords',
     color: 'text-red-400',
     description: t('moneyGuide.methods.gymReruns.description'),
-    details: t('moneyGuide.methods.gymReruns.details', { returnObjects: true }) as unknown as string[]
+    details: getDetailsArray('moneyGuide.methods.gymReruns.details', 7)
   },
   {
     name: t('moneyGuide.methods.trainerRebattles.name'),
@@ -23,7 +32,7 @@ const methods = computed(() => [
     icon: 'i-lucide-user',
     color: 'text-blue-400',
     description: t('moneyGuide.methods.trainerRebattles.description'),
-    details: t('moneyGuide.methods.trainerRebattles.details', { returnObjects: true }) as unknown as string[]
+    details: getDetailsArray('moneyGuide.methods.trainerRebattles.details', 6)
   },
   {
     name: t('moneyGuide.methods.leppaBerryFarming.name'),
@@ -32,7 +41,7 @@ const methods = computed(() => [
     icon: 'i-lucide-flower-2',
     color: 'text-green-400',
     description: t('moneyGuide.methods.leppaBerryFarming.description'),
-    details: t('moneyGuide.methods.leppaBerryFarming.details', { returnObjects: true }) as unknown as string[]
+    details: getDetailsArray('moneyGuide.methods.leppaBerryFarming.details', 6)
   },
   {
     name: t('moneyGuide.methods.gtlTrading.name'),
@@ -41,7 +50,7 @@ const methods = computed(() => [
     icon: 'i-lucide-bar-chart-3',
     color: 'text-purple-400',
     description: t('moneyGuide.methods.gtlTrading.description'),
-    details: t('moneyGuide.methods.gtlTrading.details', { returnObjects: true }) as unknown as string[]
+    details: getDetailsArray('moneyGuide.methods.gtlTrading.details', 7)
   },
   {
     name: t('moneyGuide.methods.pickupFarming.name'),
@@ -50,7 +59,7 @@ const methods = computed(() => [
     icon: 'i-lucide-package',
     color: 'text-yellow-400',
     description: t('moneyGuide.methods.pickupFarming.description'),
-    details: t('moneyGuide.methods.pickupFarming.details', { returnObjects: true }) as unknown as string[]
+    details: getDetailsArray('moneyGuide.methods.pickupFarming.details', 6)
   },
   {
     name: t('moneyGuide.methods.catchingSelling.name'),
@@ -59,7 +68,7 @@ const methods = computed(() => [
     icon: 'i-lucide-target',
     color: 'text-cyan-400',
     description: t('moneyGuide.methods.catchingSelling.description'),
-    details: t('moneyGuide.methods.catchingSelling.details', { returnObjects: true }) as unknown as string[]
+    details: getDetailsArray('moneyGuide.methods.catchingSelling.details', 7)
   },
   {
     name: t('moneyGuide.methods.eventParticipation.name'),
@@ -68,7 +77,7 @@ const methods = computed(() => [
     icon: 'i-lucide-calendar',
     color: 'text-orange-400',
     description: t('moneyGuide.methods.eventParticipation.description'),
-    details: t('moneyGuide.methods.eventParticipation.details', { returnObjects: true }) as unknown as string[]
+    details: getDetailsArray('moneyGuide.methods.eventParticipation.details', 6)
   }
 ])
 
