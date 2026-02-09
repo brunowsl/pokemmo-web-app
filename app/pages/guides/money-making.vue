@@ -23,7 +23,8 @@ const methods = computed(() => [
     icon: 'i-lucide-swords',
     color: 'text-red-400',
     description: t('moneyGuide.methods.gymReruns.description'),
-    details: getDetailsArray('moneyGuide.methods.gymReruns.details', 7)
+    details: getDetailsArray('moneyGuide.methods.gymReruns.details', 7),
+    videoUrl: 'https://www.youtube.com/embed/Z0elK91eg60'
   },
   {
     name: t('moneyGuide.methods.trainerRebattles.name'),
@@ -202,6 +203,18 @@ const tips = computed(() => [
               <span class="text-muted">{{ detail }}</span>
             </li>
           </ul>
+
+          <div v-if="method.videoUrl" class="mt-4">
+            <div class="aspect-video rounded-lg overflow-hidden">
+              <iframe
+                :src="method.videoUrl"
+                class="w-full h-full"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              />
+            </div>
+          </div>
         </UCard>
       </div>
     </UPageSection>
